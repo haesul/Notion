@@ -1,0 +1,113 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  background: none;  /* 전체 배경색 */
+
+}
+.wrapper{
+  width: 285px;
+  height: 255px;
+  background:#fff;
+  border-radius: 20px;
+  box-shadow: 0; 
+  border: 3.2px solid #a5bbcc;
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 30px 14px 1px;
+  justify-content: center;  /* 중앙 정렬 */
+}
+header .current-date{
+  font-family: 'Playfair Display', sans-serif;
+  position: fixed;
+  font-size: 1.63rem;
+  font-weight: 600;
+  text-align: center;  /* 텍스트 중앙 정렬 */
+  color: #a5bbcc;
+} /* 년도, 달 글자 */
+
+button.btn {
+  width: 8px;
+  height: 3px;
+  font-size: 35px;
+  margin: 6px;
+  transition: 0.3s;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center;
+}
+button.btn:hover {
+  background-color: #e9edf0;
+  transition: 0.3s;
+}
+.calendar{
+  padding: 20px;
+} /* 버튼 설정있던 자리 */
+
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 0.8rem;
+}
+ .weeks {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.calendar .weeks li{
+  color: #a5bbcc;
+  font-size: 13.6px;
+  cursor: default;
+  font-weight: bold;
+}
+.calendar ul li{
+  position: relative;
+}
+.calendar .days li{
+  color: #1b2833;
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 12px;    /* 전체 너비 */
+}
+.calendar .days li::before{
+  position: absolute;
+  content: "";
+  height: 27px;
+  width: 28px;
+  top: 55%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 46%;
+  transform: translate(-50%, -50%);
+}
+.days li:hover::before{
+  background: #D1DBE2;
+}
+.days li.active::before{
+  background: #a5bbcc;
+}
+.days li.inactive{
+  color: #afbec9;
+}
+.days li.active{
+  color: #fff;
+}
+.days li:not(.active):hover::before{
+  background: #f2f4f7;
+}

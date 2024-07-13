@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"> 
+<head>
+    <meta charset="utf-8">
+    <title>Dynamic Calendar JavaScript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+
+    <style>
+        .calendar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .weeks {
+            display: flex;
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            width: 111%;
+        }
+        
+        .days {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #scroller {
+            overflow-y: scroll;
+            height: 146px;
+            width: 111.5%;
+            max-width: 290px;
+            border: 5px
+            padding: 0;
+            margin: 0;
+        }
+
+        #output {
+            padding: 1rem 0;
+        }
+
+        header {
+            text-align: center;
+            align-items: center;
+        }
+
+        .current-date {
+            text-align: center;
+        }
+
+        .find-btn {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            width: 100%;
+        }
+        .btn-container-left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* 왼쪽 정렬 */
+            flex-grow: 1;
+        }
+
+         .btn-container-right {
+            display: flex;
+            align-items: center; 
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        .btn {
+            background-color: #fff;
+            display: inline-flex;
+            text-decoration: none;
+            border: none;
+            padding: 10px 10px;
+            color: #a5bbcc;
+            border-radius: 100px;
+            outline: none;
+            cursor: pointer;
+        }
+         /* Scrollbar styles */
+        
+        ::-webkit-scrollbar {
+            width: 5.5px; /* 스크롤바의 너비 */
+            height: 5px; /* 스크롤바의 높이 (수평 스크롤바의 경우) */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #e9edf0, #a5bbcc); /* 그라데이션 색상 */
+            border-radius: 100px; /* 둥근 모서리 */
+        }
+        ::-webkit-scrollbar-track {
+           background: #ffff; /* 트랙 배경색 */
+           border-radius: 100px; /* 둥근 모서리 */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="month"></div>
+        <header>
+            <p class="current-date"></p>
+            <div class="find-btn">
+                <div class="btn-container-left">
+                <button type="button" class="btn prev">‹</button>
+                  </div>
+                <div class="btn-container-right">
+                <button type="button" class="btn next">›</button>
+                 </div> 
+            </div>
+        </header>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>Su</li>
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Ft</li>
+                <li>Sa</li>
+            </ul>
+            <div id="scroller">
+                <ul class="days"></ul>
+            </div>
+            <div id="output"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -17,8 +17,8 @@ body{
 
 }
 .wrapper{
-  width: 285px;
-  height: 255px;
+  width: 220px;
+  height: 218px;
   background:#fff;
   border-radius: 20px;
   box-shadow: 0; 
@@ -33,27 +33,24 @@ body{
 header .current-date{
   font-family: 'Playfair Display', sans-serif;
   position: fixed;
-  font-size: 1.63rem;
+  font-size: 1.25rem;
   font-weight: 600;
   text-align: center;  /* 텍스트 중앙 정렬 */
   color: #a5bbcc;
 } /* 년도, 달 글자 */
 
 button.btn {
-  width: 8px;
-  height: 3px;
-  font-size: 35px;
-  margin: 6px;
+  width: 2px;
+  height: 2px;
+  font-size: 28px;
+  margin: 0px;
   transition: 0.3s;
   justify-content: center; /* 수평 가운데 정렬 */
   align-items: center;
 }
-button.btn:hover {
-  background-color: #e9edf0;
-  transition: 0.3s;
-}
+
 .calendar{
-  padding: 20px;
+  padding: 21px;
 } /* 버튼 설정있던 자리 */
 
 .calendar .days{
@@ -62,7 +59,7 @@ button.btn:hover {
 .calendar li{
   color: #333;
   width: calc(100% / 7);
-  font-size: 0.8rem;
+  font-size: 0.63rem;
 }
  .weeks {
   display: flex;
@@ -71,7 +68,7 @@ button.btn:hover {
 }
 .calendar .weeks li{
   color: #a5bbcc;
-  font-size: 13.6px;
+  font-size: 13px;
   cursor: default;
   font-weight: bold;
 }
@@ -88,8 +85,8 @@ button.btn:hover {
 .calendar .days li::before{
   position: absolute;
   content: "";
-  height: 27px;
-  width: 28px;
+  height: 22.5px;
+  width: 21px;
   top: 55%;
   left: 50%;
   z-index: -1;
